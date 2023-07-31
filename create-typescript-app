@@ -1,0 +1,41 @@
+#!/bin/bash
+set -eu
+
+replace() {
+	a="$1"
+	b="$2"
+	f="$3"
+	# handle gnu and bsd sed
+	sed -i.tmp "s/$a/$b/g" "$f" && rm "$f.tmp"
+}
+
+dir="${1:-.}"
+if [[ -z "$dir" ]]; then
+	echo "Error: missing destination pathname"
+	exit 1
+fi
+
+appname=${dir##*/}
+if [[ "$appname" == "." ]]; then
+	appname=${PWD##*/}
+fi
+
+echo Creating app...
+git clone --depth=1 https://github.com/subfuzion/typescript-starter-app.git "$dir"
+rm -rf "$dir/.git" >/dev/null
+
+
+printf "Preparing app..."
+cd "$dir"
+replace "typescript-starter-app" "$appname" package.json
+git init 1>/dev/null
+git add . 1>/dev/null
+git commit -m "Initial commit" 1>/dev/null
+echo "done."
+
+echo "Success: created typescript-starter-app ($appname)"
+echo "Enter the following commands:"
+if [[ "$dir" != "." ]]; then
+	printf "\tcd $dir\n"
+fi
+printf "\tnpm install\n"

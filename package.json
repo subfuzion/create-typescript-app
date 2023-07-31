@@ -1,0 +1,9 @@
+{
+  "name": "create-typescript-app",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "bin": {
+    "create-typescript-app": "bin/create-typescript-app"
+  }
+}

@@ -45,11 +45,13 @@ If you want to use the latest version from the GitHub
 npx github:subfuzion/create-typescript-app [path]
 ```
 
-> [!Note]
+> **Note**
+>
 > - If `path` isn't specified, it defaults to the current working directory (`.`).
 > - The directory under `path` must be empty. 
 
-> ⚠️!Caution]
+> **WARNING**
+>
 > Currently under development. This implementation assumes:
 > 
 > 1. You're running the latest LTS version (or greater) of

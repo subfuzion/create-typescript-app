@@ -15,27 +15,29 @@ if [[ -z "$dir" ]]; then
 	exit 1
 fi
 
-appname=${dir##*/}
-if [[ "$appname" == "." ]]; then
-	appname=${PWD##*/}
+app=${dir##*/}
+if [[ "$app" == "." ]]; then
+	app=${PWD##*/}
 fi
 
-echo Creating app...
+echo "Creating app..."
 git clone --depth=1 https://github.com/subfuzion/typescript-starter-app.git "$dir"
 rm -rf "$dir/.git" >/dev/null
 
 
-printf "Preparing app..."
+printf "⏳Preparing app..."
 cd "$dir"
-replace "typescript-starter-app" "$appname" package.json
+replace "typescript-starter-app" "$app" package.json
+npm install 1>/dev/null
+npm run prepare 1>/dev/null
 git init 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null
 echo "done."
 
-echo "Success: created typescript-starter-app ($appname)"
-echo "Enter the following commands:"
+echo "✅Success: created typescript-starter-app ($app)"
+echo "🚀You're ready to start coding!"
 if [[ "$dir" != "." ]]; then
+  echo "Enter:"
 	printf "\tcd $dir\n"
 fi
-printf "\tnpm install\n"

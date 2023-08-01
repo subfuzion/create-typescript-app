@@ -15,6 +15,7 @@ if [[ -z "$dir" ]]; then
 	exit 1
 fi
 
+# Can I assume basename on macOS?
 app=${dir##*/}
 if [[ "$app" == "." ]]; then
 	app=${PWD##*/}

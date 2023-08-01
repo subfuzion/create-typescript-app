@@ -1,4 +1,4 @@
-# create-typescript-app
+# @subfuzion/create-typescript-app
 
 Create a Node.js app configured for TypeScript.
 
@@ -18,7 +18,7 @@ The linting and formatting tools have been configured to  work together:
 
 The generated app includes a number of package scripts for development, including:
 - `dev` and `dev:notify`
-- `compile` and `compile:watch`
+- `build` and `build:watch`
 - `test` and `test:watch`
 - `lint` and `lint:fix`
 
@@ -30,7 +30,7 @@ See [typescript-starter-app
 ](https://github.com/subfuzion/typescript-starter-app#development)
 for details.
 
-## Using create-typescript-app
+## Using @subfuzion/create-typescript-app
 
 To use the latest published version, enter:
 

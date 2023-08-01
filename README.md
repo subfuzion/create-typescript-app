@@ -1,8 +1,10 @@
 # @subfuzion/create-typescript-app
 
-Create a Node.js app configured for TypeScript.
+Get up and running with minimal boilerplate for writing, testing, linting, and
+formatting TypeScript for Node.js app, and nothing else. There are no other
+assumptions or opinions about what frameworks you need.
 
-Configuration boilerplate includes:
+Configuration boilerplate for jump starting your app development includes:
 
 * [TypeScript](https://typescriptlang.org/)
 * [Jest](https://jestjs.io/)

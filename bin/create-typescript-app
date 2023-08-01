@@ -32,7 +32,6 @@ git init 1>/dev/null
 npm install 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null
-npm run prepare 1>/dev/null && git add . && git commit -m "chore: prepare"
 echo "done."
 
 echo "✅ Success: created typescript-starter-app ($app)"

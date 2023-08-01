@@ -17,10 +17,10 @@ The linting and formatting tools have been configured to  work together:
 * `.eslintrc.json` uses Prettier for formatting
 
 The generated app includes a number of package scripts for development, including:
-- `dev` and `dev:notify`
-- `build` and `build:watch`
-- `test` and `test:watch`
-- `lint` and `lint:fix`
+- `dev` | `dev:notify`
+- `build` | `build:watch`
+- `test` | `test:watch`
+- `lint` | `lint:fix`
 
 It is also configured with a `pre-commit` hook using
 [Husky](https://typicode.github.io/husky/) and

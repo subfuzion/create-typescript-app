@@ -24,7 +24,6 @@ echo "Creating app..."
 git clone --depth=1 https://github.com/subfuzion/typescript-starter-app.git "$dir"
 rm -rf "$dir/.git" >/dev/null
 
-
 printf "⏳ Preparing app..."
 cd "$dir"
 replace "typescript-starter-app" "$app" package.json
@@ -37,6 +36,6 @@ npm run prepare 1>/dev/null && git add . && git commit -m "chore: prepare pre-co
 echo "✅ Success: created typescript-starter-app ($app)"
 echo "🚀 You're ready to start coding!"
 if [[ "$dir" != "." ]]; then
-  echo "Enter:"
-	printf "\tcd $dir\n"
+	echo "Enter:"
+	printf "\tcd %s\n" "$dir"
 fi

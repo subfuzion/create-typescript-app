@@ -1,6 +1,8 @@
 # create-typescript-app
 
-Creates a starter app with configurations for
+Create a Node.js app configured for TypeScript.
+
+Configuration boilerplate includes:
 
 * [TypeScript](https://typescriptlang.org/)
 * [Jest](https://jestjs.io/)
@@ -14,8 +16,17 @@ The linting and formatting tools have been configured to  work together:
 * `.editorconfig` has settings that feed into Prettier
 * `.eslintrc.json` uses Prettier for formatting
 
-The app is created with a number of package scripts for development. See
-[typescript-starter-app
+The generated app includes a number of package scripts for development, including:
+- `dev` and `dev:notify`
+- `compile` and `compile:watch`
+- `test` and `test:watch`
+- `lint` and `lint:fix`
+
+It is also configured with a `pre-commit` hook using
+[Husky](https://typicode.github.io/husky/) and
+[lint-staged](https://github.com/okonet/lint-staged).
+
+See [typescript-starter-app
 ](https://github.com/subfuzion/typescript-starter-app#development)
 for details.
 
@@ -34,13 +45,11 @@ If you want to use the latest version from the GitHub
 npx github:subfuzion/create-typescript-app [path]
 ```
 
-> **Note**
-> 
+> [!Note]
 > - If `path` isn't specified, it defaults to the current working directory (`.`).
 > - The directory under `path` must be empty. 
 
-> ⚠️ **Caution**
-> 
+> ⚠️!Caution]
 > Currently under development. This implementation assumes:
 > 
 > 1. You're running the latest LTS version (or greater) of

@@ -25,18 +25,18 @@ git clone --depth=1 https://github.com/subfuzion/typescript-starter-app.git "$di
 rm -rf "$dir/.git" >/dev/null
 
 
-printf "⏳Preparing app..."
+printf "⏳ Preparing app..."
 cd "$dir"
 replace "typescript-starter-app" "$app" package.json
+git init 1>/dev/null
 npm install 1>/dev/null
 npm run prepare 1>/dev/null
-git init 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null
 echo "done."
 
-echo "✅Success: created typescript-starter-app ($app)"
-echo "🚀You're ready to start coding!"
+echo "✅ Success: created typescript-starter-app ($app)"
+echo "🚀 You're ready to start coding!"
 if [[ "$dir" != "." ]]; then
   echo "Enter:"
 	printf "\tcd $dir\n"

@@ -13,7 +13,7 @@ Configuration boilerplate includes:
 
 The linting and formatting tools have been configured to  work together:
 
-* `.editorconfig` has settings that feed into Prettier
+* `.editorconfig` has format settings that feed into Prettier
 * `.eslintrc.json` uses Prettier for formatting
 
 The generated app includes a number of package scripts for development, including:

@@ -34,7 +34,7 @@ git commit -m "Initial commit" 1>/dev/null
 git branch -M main
 npm install 1>/dev/null
 npm run prepare 1>/dev/null && \
-	npx husky add .config/husky/pre-commit "npx lint-staged --allow-empty" && \
+	npx husky add .husky/pre-commit "npx lint-staged --allow-empty" && \
 	git add . && \
 	git commit -m "chore: prepare pre-commit hook"
 

@@ -31,6 +31,7 @@ replace "typescript-starter-app" "$app" package.json
 git init 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null
+git branch -M main
 npm install 1>/dev/null
 npm run prepare 1>/dev/null && \
 	npx husky add .config/husky/pre-commit "npx lint-staged --allow-empty" && \

@@ -32,7 +32,10 @@ git init 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null
 npm install 1>/dev/null
-npm run prepare 1>/dev/null && git add . && git commit -m "chore: prepare pre-commit hook"
+npm run prepare 1>/dev/null && \
+	npx husky add .config/husky/pre-commit "npx lint-staged" && \
+	git add . && \
+	git commit -m "chore: prepare pre-commit hook"
 
 echo "✅ Success: created typescript-starter-app ($app)"
 echo "🚀 You're ready to start coding!"

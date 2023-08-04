@@ -1,6 +1,6 @@
 {
   "name": "@subfuzion/create-typescript-app",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Create a Node.js app configured for TypeScript",
   "license": "MIT",
   "bin": {

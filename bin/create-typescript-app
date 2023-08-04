@@ -27,7 +27,9 @@ rm -rf "$dir/.git" >/dev/null
 
 printf "⏳ Preparing app..."
 cd "$dir"
-replace "typescript-starter-app" "$app" package.json
+#replace "typescript-starter-app" "$app" package.json
+npm pkg set name="$app"
+npm pkg set version="0.1.0"
 git init 1>/dev/null
 git add . 1>/dev/null
 git commit -m "Initial commit" 1>/dev/null

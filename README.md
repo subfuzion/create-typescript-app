@@ -4,6 +4,17 @@ Get up and running with minimal boilerplate for writing, testing, linting, and
 formatting TypeScript for Node.js app, and nothing else. There are no other
 assumptions or opinions about what frameworks you need.
 
+```
+npx @subfuzion/create-typescript-app [path]
+```
+
+> **Note**
+>
+> - If `path` isn't specified, it defaults to the current working directory (`.`).
+> - The directory under `path` must be empty. 
+
+## Details
+
 Configuration boilerplate for jump starting your app development includes:
 
 * [TypeScript]
@@ -27,9 +38,7 @@ The generated app includes a number of package scripts for development, includin
 It is also configured with a `pre-commit` hook using [Husky] and
 [lint-staged].
 
-See [@subfuzion/typescript-starter-app] for details.
-
-## Using @subfuzion/create-typescript-app
+## Notes
 
 To use the latest published version, enter:
 
@@ -42,11 +51,6 @@ If you want to use the latest version from the GitHub [repo], enter:
 ```
 npx github:subfuzion/create-typescript-app [path]
 ```
-
-> **Note**
->
-> - If `path` isn't specified, it defaults to the current working directory (`.`).
-> - The directory under `path` must be empty. 
 
 > **WARNING**
 >

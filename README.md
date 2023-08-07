@@ -66,7 +66,7 @@ npx github:subfuzion/create-typescript-app [path]
 
 ## Source
 
-The source for the generated app is in the [subfuzuion/typescript-starter-app]
+The source for the generated app is in the [@subfuzion/typescript-starter-app]
 repo.
 
 ## License

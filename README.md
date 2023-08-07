@@ -1,4 +1,4 @@
-# @subfuzion/create-typescript-app
+# create-typescript-app
 
 Get up and running with minimal boilerplate for writing, testing, linting, and
 formatting TypeScript for Node.js app, and nothing else. There are no other
